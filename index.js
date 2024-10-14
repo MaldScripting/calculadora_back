@@ -8,6 +8,10 @@ const app = express();
 app.use(urlencoded({extended: true}));
 app.use(json());
 app.use(cors());
+app.get('/', async (req, res) => {
+    res.send("bBackend de la calculadora en vivo");
+  }); 
+  
 
 app.use('/v1/calculadora', router);
 
